@@ -2,6 +2,7 @@ import {Component} from 'react'
 import {Route, Switch, Redirect} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
+import Register from './components/Register'
 import Home from './components/Home'
 import Products from './components/Products'
 import ProductItemDetails from './components/ProductItemDetails'
@@ -101,6 +102,7 @@ class App extends Component {
       >
         <Switch>
           <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/register" component={Register} />
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/products" component={Products} />
           <ProtectedRoute
